@@ -11,6 +11,7 @@ class Profile extends StatelessWidget {
       body: DefaultTabController(
         length: 3,
         child: NestedScrollView(
+          physics: NeverScrollableScrollPhysics(),
           headerSliverBuilder: (BuildContext context, bool innerBoxIsScrolled) {
             return <Widget>[
               SliverAppBar(

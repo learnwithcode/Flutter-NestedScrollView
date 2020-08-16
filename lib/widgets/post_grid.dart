@@ -18,21 +18,19 @@ class PostGrid extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      child: GridView.count(
-        controller: ScrollController(),
-        physics: BouncingScrollPhysics(),
-        shrinkWrap: true,
-        mainAxisSpacing: 2.0,
-        crossAxisSpacing: 2.0,
-        crossAxisCount: 3,
-        children: List.generate(
-          posts.length,
-          (index) {
-            Post post = posts[index];
-            return _buildPosts(context, post);
-          },
-        ),
+    return GridView.count(
+      // controller: ScrollController(),
+      physics: BouncingScrollPhysics(),
+      shrinkWrap: true,
+      mainAxisSpacing: 2.0,
+      crossAxisSpacing: 2.0,
+      crossAxisCount: 3,
+      children: List.generate(
+        posts.length,
+        (index) {
+          Post post = posts[index];
+          return _buildPosts(context, post);
+        },
       ),
     );
   }
